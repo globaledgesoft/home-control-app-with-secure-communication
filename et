@@ -1,0 +1,22 @@
+[1mdiff --git a/app/src/main/java/com/app/qdn_homecontrol_app/Util/RuntimePermission.java b/app/src/main/java/com/app/qdn_homecontrol_app/Util/RuntimePermission.java[m
+[1mindex 77edf5b..bda34e8 100644[m
+[1m--- a/app/src/main/java/com/app/qdn_homecontrol_app/Util/RuntimePermission.java[m
+[1m+++ b/app/src/main/java/com/app/qdn_homecontrol_app/Util/RuntimePermission.java[m
+[36m@@ -46,15 +46,8 @@[m [mpublic class RuntimePermission {[m
+                     == PackageManager.PERMISSION_GRANTED)[m
+             {[m
+                 isLocation = true;[m
+[31m-            } else{[m
+[31m-                Toast.makeText(activity, "goto the app settings and give the location permission", Toast.LENGTH_SHORT).show();[m
+[31m-[m
+[31m-                isLocation = false;[m
+[31m-            }[m
+[31m-        } else {[m
+[31m-[m
+[31m-            isLocation = false;[m
+[31m-        }[m
+[32m+[m[32m            } else isLocation = false;[m
+[32m+[m[32m        } else isLocation = false;[m
+         return isLocation;[m
+     }[m
+ [m

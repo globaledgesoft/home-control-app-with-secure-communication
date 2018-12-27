@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".Activity.AboutActivity"
+    android:background="#ffffff">
+
+    <android.support.v7.widget.Toolbar
+        android:id="@+id/toolbarLayoutAbout"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/gunmetalGray"
+        >
+
+        <ImageView
+            android:src="@drawable/back_button_img"
+            android:layout_gravity="start"
+            android:layout_margin="@dimen/dim_10dp"
+            android:padding="@dimen/dim_10dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:id="@+id/backButtonAbout"
+            />
+
+
+        <com.app.globaledge_homecontrol_app.Util.GETextView
+            android:textColor="@color/white"
+            android:text="@string/about"
+            style="@style/toolbarTextView" />
+
+    </android.support.v7.widget.Toolbar>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/toolbarLayoutAbout"
+        android:layout_margin="@dimen/dim_10dp"
+        android:orientation="vertical"
+        android:gravity="center"
+        >
+
+        <ImageView
+            android:id="@+id/imageView"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:contentDescription="@string/qualcomm_image"
+            android:src="@drawable/about_page_img" />
+
+        <com.app.globaledge_homecontrol_app.Util.GETextView
+            android:layout_margin="@dimen/dim_10dp"
+            android:id="@+id/textViewVersion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            style="@style/listItemTitleTextView"/>
+    </LinearLayout>
+
+
+</RelativeLayout>
